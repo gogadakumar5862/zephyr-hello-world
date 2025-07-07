@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/var/lib/jenkins/workspace/zephyrproject/zephyr/samples/hello_world'
+    source-dir: '/var/lib/jenkins/workspace/zephyrproject/zephyr/samples/hello_world'
+  board:
+    name: 'native_sim'
+    path:
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/boards/native/native_sim'
+    qualifiers: 'native'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/boards/native/native_sim/native_sim.dts'
+    include-dirs:
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/ambiq/dts'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/atmel/include'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/bouffalolab/include'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/gigadevice/include'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/microchip/include'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/microchip/dts'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/nuvoton/dts'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/nxp/dts'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/stm32/dts'
+     - '/var/lib/jenkins/workspace/zephyrproject/modules/hal/ti/dts'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/include'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/include/zephyr'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/common'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/vendor'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/rx'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/x86'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/xtensa'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/sparc'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/riscv'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/posix'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/arm64'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/arm'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts/arc'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/boards/native/native_sim/native_sim_defconfig'
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/samples/hello_world/prj.conf'
+    user-files:
+     - '/var/lib/jenkins/workspace/zephyrproject/zephyr/samples/hello_world/prj.conf'
+  toolchain:
+    name: 'host'
+    path: ''
+  zephyr:
+    version: '4.2.0-rc1'
+    zephyr-base: '/var/lib/jenkins/workspace/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/var/lib/jenkins/.local/bin/west build -b native_sim -p always'
+  topdir: '/var/lib/jenkins/workspace/zephyrproject'
+  version: '1.4.0'

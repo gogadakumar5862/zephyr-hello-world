@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "/var/lib/jenkins/workspace/zephyrproject/zephyr/boards/native/native_sim/Kconfig.sysbuild"
